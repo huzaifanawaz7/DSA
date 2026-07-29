@@ -1,7 +1,7 @@
 #include<iostream>
 using namespace std;
 int main(){
-int array[5]={1,2,3,45};
+int array[5]={1,2,3,45,21};
 int start=0;
 int end=5-1;
 while(start<=end){
