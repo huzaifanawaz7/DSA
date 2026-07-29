@@ -26,7 +26,4 @@ if(rec){
 }else{
     cout<<"this number cant be converted into the power of two"<<endl;
 }
-
-
-
 }
