@@ -1,1 +1,1 @@
-isprime=false;
+int ans=0;
