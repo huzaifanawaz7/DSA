@@ -13,7 +13,7 @@ if(arr[mid]>=arr[0]){
  mid = s + (e - s) / 2;
 
 }
-return arr[e];
+return e;
 }
 int binaryatsecond(int arr[],int s,int e,int tar){
            int start=s;
@@ -21,7 +21,7 @@ int binaryatsecond(int arr[],int s,int e,int tar){
            int mid=start+(end-start)/2;
            while(start<=end){
             if(arr[mid]==tar){
-                return mid;
+                return arr[mid];
             }if(tar >arr[mid]){
                 start=mid+1;
             }else{
@@ -34,17 +34,17 @@ int binaryatsecond(int arr[],int s,int e,int tar){
 int findtarget(int tar,int arr[],int siz){
       int pivot=findpivot(arr,siz);
       if( tar >=pivot && tar<=arr[siz-1]){
-                return binaryatsecond(arr,pivot,siz,tar);   
+                return binaryatsecond(arr,pivot,siz-1,tar);   
       }else{
         // the bd will be applied on the first line
-                return binaryatsecond(arr,pivot,siz,tar);   
+                return binaryatsecond(arr, 0, pivot - 1, tar); 
       }
 }
 
 int main(){
     int size=6;
-    int arr[size]={1,2,4,56,6,8};
-    int tar=56;
+    int arr[size]={9,10,12,1,2,4};
+    int tar=9;
 // findpivot(arr,size);
 int num=findtarget( tar,arr, size);
 if (num==-1){
