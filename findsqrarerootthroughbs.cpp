@@ -23,9 +23,22 @@ int binarysearch(int n){
     
   
     }
-int main(){
-int x=8;
-int s= binarysearch(x);
-cout<<"the square root is "<<s;
+    double decimal_solution (int n,int precision,int tempsol){
+                    double factor=1;
+                    double ans=tempsol;
+                    for(int i=0;i<precision;i++){
+                        factor=factor/10;
+                        for(double j=ans;j*j<n;j=j+factor){
+                            ans=j;
+                        }
 
+                    }
+                    return ans;
+    }
+int main(){
+int x=101;
+int s= binarysearch(x);
+
+cout<<"the square root is "<<s;
+cout<<"more precise answer is "<<decimal_solution(x,3,s);
 }
