@@ -15,6 +15,4 @@ cout<<"the sorted array is "<<endl;
 for (int k=0;k<5;k++){
     cout<<arr[k]<<" ";
 }
-
-
 }
